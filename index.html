@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h1>AI Coding Challenge Platform</h1>
+            <h3>why not create your own?</h3>
+        </section>
+        <section>
+            <h2>Motivation</h2>
+            <ul>
+                Interesting platforms where bots can compete in custom made games:
+                <li class="fragment"><a href="http://codingame.com/">CodinGame</a></li>
+                <li class="fragment"><a href="http://aichallenge.org/">Google AI Challenge</a></li>
+                <li class="fragment"><a href="http://russianaicup.ru/">Russian AI Cup</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>What does it mean?</h2>
+            <ul>
+                <li class="fragment">Platform provides game, referee and leaderboard</li>
+                <li class="fragment">Programmers will send their implementation to compete, in programming language of their choice<br/><span class="fragment">...more or less</span></li>
+                <li class="fragment">Bots play against each other and get ranked by something similar to TrueSkill &trade;</li>
+            </ul>
+        </section>
+        <section>
+            <h2>If only we knew of a game</h2>
+            <ul>
+                <li class="fragment">... that is interesting</li>
+                <li class="fragment">... and challenging</li>
+                <li class="fragment">... maybe even completeable during woodhack</li>
+                <img class="fragment" src="img/tictactoe.png"/>
+            </ul>
+        </section>
+        <section>
+            <h2>What did we do?</h2>
+            <ul>
+                <li>Prepare Coding Container for JavaScript, Scala, Docker, Swift3</li>
+                <li>Determined a protocoll the seperate applications should talk to each other</li>
+                <pre><code class="hljs" style="word-wrap: break-word;">
+    [[INIT] 1]
+    2
+    [[GET_GAME_INFO] 0]
+    _________
+    ...
+                </code></pre>
+            </ul>
+        </section>
+        <section>
+            <h1>But wait did I mention multiple applications</h1>
+        </section>
+        <section>
+            <h2>Brainstorming...</h2>
+            <img src="img/brainstorm.jpg" height="800"/>
+        </section>
+        <section>
+            <h2>Conclusion</h2>
+            <ul>
+                <li>hell of a lot more work than expected</li>
+                <li>hope to continue work on the side</li>
+                <li>maybe continue next year....</li>
+            </ul>
+        </section>
+        <section>
+            <h2>I want to contribute!</h2>
+            <h3><a href="https://arenaio.github.io">https://arenaio.github.io</a></h3>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+  // More info https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    slideNumber: 'c/t',
+
+    defaultTiming: 60,
+
+    history: true,
+
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+      {
+        src: 'plugin/notes/notes.js',
+        async: true
+      },
+      {
+        src: 'plugin/highlight/highlight.js',
+        async: true,
+        callback: function () {
+          hljs.initHighlightingOnLoad();
+        }
+      }
+    ]
+  });
+</script>
+</body>
+</html>
